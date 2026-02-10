@@ -1,5 +1,5 @@
 import { BaseCrudApiClient, BaseRecord } from '@/apis/base';
-import { YAAH } from '@/config/env';
+import { BDS } from '@/config/env';
 import { Session } from 'next-auth';
 import { getSession } from 'next-auth/react';
 
@@ -26,7 +26,7 @@ export class YaahCrudApiClient<T extends BaseRecord = BaseRecord> extends BaseCr
   constructor({ resource }: IYaahCrudApiClientOptions) {
     const baseUrl =
       typeof window === 'undefined'
-        ? `${YAAH.API_URL}/api/${resource}`
+        ? `${BDS.API_URL}/api/${resource}`
         : `${window.location.origin}/yaah-api/v1/${resource}`;
     super({ baseUrl });
     this.client.interceptors.request.use(async (config) => {

@@ -1,4 +1,4 @@
-import { YAAH } from '@/config/env';
+import { BDS } from '@/config/env';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/yaah-api/v1/:path*',
-        destination: `${YAAH.API_URL}/api/:path*`,
+        destination: `${BDS.API_URL}/api/:path*`,
       },
     ];
   },

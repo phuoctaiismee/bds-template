@@ -1,6 +1,6 @@
 // Private
-export const YAAH = {
-  API_URL: process.env['YAAH_API_URL']!,
+export const BDS = {
+  API_URL: process.env['BDS_API_URL']!,
 };
 
 export const MAP_STYLE_URL = process.env['NEXT_PUBLIC_MAP_STYLE_URL']!;
