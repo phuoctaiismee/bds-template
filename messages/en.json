@@ -1,0 +1,10 @@
+{
+  "errors": {
+    "404": {
+      "backToHome": "Back to home"
+    }
+  },
+  "site": {
+    "title": "Vietnam's leading scheduling platform"
+  }
+}

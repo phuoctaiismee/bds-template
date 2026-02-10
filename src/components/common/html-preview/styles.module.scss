@@ -1,0 +1,14 @@
+.wrapper {
+  ul {
+    li {
+      padding-left: 10px;
+      list-style: '-';
+
+      ul {
+        li {
+          list-style: '+';
+        }
+      }
+    }
+  }
+}

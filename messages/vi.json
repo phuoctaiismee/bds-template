@@ -1,0 +1,23 @@
+{
+  "site": {
+    "title": "Nền tảng mua bán bất động sản hàng đầu Việt Nam"
+  },
+  "errors": {
+    "404": {
+      "backToHome": "Về trang chủ"
+    }
+  },
+  "reservation": {
+    "extend_options": {
+      "flexible": {
+        "label": "Tự do"
+      },
+      "specific_minutes": {
+        "label": "Thời gian cụ thể"
+      },
+      "until_next_time_slot": {
+        "label": "Đển phiên tiếp theo"
+      }
+    }
+  }
+}

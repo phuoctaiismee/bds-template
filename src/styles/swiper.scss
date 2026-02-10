@@ -1,0 +1,36 @@
+.swiper-button-next,
+.swiper-button-prev {
+  background: var(--background);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100px;
+  box-shadow: 0 0 10px #0002;
+  border-color: var(--secondary);
+  border-width: 1px;
+  border-style: solid;
+
+  &::after {
+    content: '' !important;
+    width: 16px;
+    aspect-ratio: 1;
+    background: url(/icons/arrow-right.svg) no-repeat center;
+  }
+
+  &.swiper-button-disabled {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-next {
+  margin-right: -10px;
+}
+
+.swiper-button-prev {
+  margin-left: -10px;
+}

@@ -1,0 +1,65 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Hóa đơn điện tử | Yaah Hub</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 5px;
+      }
+
+      p {
+        margin-block: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Yaah Hub</h1>
+      <p style='color: #333'>Phiếu thanh toán / Receipt</p>
+      <p style='color: #333'>{{date}}</p>
+
+      <hr style='border-style: dashed; color: #ddd; margin-block: 10px' />
+
+      <table>
+        <tbody>
+          {{#each body}}
+            <tr>
+              <td>{{left}}</td>
+              <td style='text-align: end'>{{right}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan='2' style='border-top: 1px dashed #555'></td>
+          </tr>
+          {{#each footer}}
+            <tr>
+              <td>{{left}}</td>
+              <td style='text-align: end;'><b>{{right}}</b></td>
+            </tr>
+          {{/each}}
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

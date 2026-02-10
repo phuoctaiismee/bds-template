@@ -1,0 +1,125 @@
+@layer theme, base, mui, components, utilities;
+@import 'tailwindcss';
+@import 'tailwind-scrollbar-hide/v4';
+@import 'swiper/css';
+@import 'animate.css';
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #334155;
+
+  /* main colors */
+  --brand-primary: #101828;
+  --primary: #1e40af;
+  --secondary: #00b894;
+
+  --luxury-gold: #d4af37;
+  --luxury-gold-dim: #996515;
+  --luxury-black: #1a1a1a;
+
+  /* contrast colors */
+  --negative: #121212;
+  --positive: #ffffff;
+
+  /*  */
+  --neutral-1: #a3a3a3;
+  --neutral-2: #6b7271;
+  --neutral-3: #e5e6e6;
+  --neutral-4: #f4f7fb;
+
+  /* alert colors */
+  --error: #ff434e;
+  --success: #1ea031;
+  --warning: #eeaf00;
+  --info: #007aff;
+
+  --shadow-float: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(30, 64, 175, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-plus-jakarta);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  --color-luxury-gold: var(--luxury-gold);
+  --color-luxury-gold-dim: var(--luxury-gold-dim);
+  --color-luxury-black: var(--luxury-black);
+
+  --color-negative: var(--negative);
+  --color-positive: var(--positive);
+
+  --color-neutral-1: var(--neutral-1);
+  --color-neutral-2: var(--neutral-2);
+  --color-neutral-3: var(--neutral-3);
+  --color-neutral-4: var(--neutral-4);
+
+  --color-error: var(--error);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+
+  --color-ai-text: var(--ai-text);
+  --color-ai-bg: var(--ai-bg);
+
+  --color-green-gradient: var(--green-gradient);
+
+  --text-title-1: 3rem;
+  --text-title-2: 2.25rem;
+  --text-title-3: 1.5rem;
+  --text-title-4: 1.25rem;
+  --text-content-1: 1rem;
+  --text-content-2: 0.875rem;
+  --text-content-3: 0.688rem;
+
+  --text-button: 0.875rem;
+  --text-button--font-weight: 700;
+
+  --text-sub-description: 0.875rem;
+  --text-sub-description--font-weight: 500;
+
+  --text-label: 0.75rem;
+  --text-label--font-weight: 500;
+
+  --spacing-2xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-md: 6px;
+  --spacing-lg: 8px;
+  --spacing-4xl: 16px;
+  --spacing-5xl: 20px;
+  --spacing-6xl: 24px;
+  --spacing-8xl: 36px;
+  --spacing-9xl: 40px;
+  --spacing-11xl: 48px;
+  --spacing-12xl: 56px;
+  --spacing-13xl: 64px;
+  --spacing-14xl: 72px;
+  --spacing-15xl: 80px;
+  --spacing-17xl: 96px;
+  --spacing-19xl: 128px;
+
+  --shadow-float: var(--shadow-float);
+  --shadow-glow: var(--shadow-glow);
+
+  --animate-bounce-slow: bounce 3s infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html {
+  font-family: var(--font-plus-jakarta);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.safe-scroll {
+  -webkit-overflow-scrolling: touch;
+}

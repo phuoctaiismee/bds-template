@@ -1,0 +1,11 @@
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BOOKING_API_URL=${BOOKING_API_URL}
+
+        - NEXT_PUBLIC_MAP_STYLE_URL=${NEXT_PUBLIC_MAP_STYLE_URL}
+    ports:
+      - 3000:3000
