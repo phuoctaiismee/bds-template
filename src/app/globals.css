@@ -41,7 +41,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-plus-jakarta);
+  --font-sans: var(--font-manrope);
   --font-mono: var(--font-geist-mono);
 
   --color-brand-primary: var(--brand-primary);
@@ -112,7 +112,7 @@
 }
 
 html {
-  font-family: var(--font-plus-jakarta);
+  font-family: var(--font-manrope);
 }
 
 body {

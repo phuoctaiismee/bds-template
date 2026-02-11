@@ -14,21 +14,16 @@ import { Metadata, Viewport } from 'next';
 import { SessionProvider } from 'next-auth/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { Geist_Mono, Plus_Jakarta_Sans } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['vietnamese'],
-  variable: '--font-plus-jakarta',
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  display: 'swap',
   weight: ['200', '300', '400', '500', '600', '700', '800'],
-  preload: true,
 });
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-});
-
 export const generateMetadata = async (): Promise<Metadata> => {
   const t = await getTranslations('site');
   return {
@@ -60,7 +55,7 @@ export default async function Layout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={cn('bg-background antialiased select-none', plusJakarta.variable, geistMono.variable)}
+      className={cn('bg-background antialiased select-none', manrope.variable)}
     >
       <body>
         <NextTopLoader color='var(--primary)' showSpinner={false} />
