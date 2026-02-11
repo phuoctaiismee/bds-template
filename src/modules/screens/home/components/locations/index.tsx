@@ -32,7 +32,7 @@ export const LocationHighlights: React.FC = () => {
             <div className='absolute bottom-0 left-0 p-6 md:p-8'>
               <h3 className='mb-2 text-2xl font-bold text-white md:text-3xl'>TP. Hồ Chí Minh</h3>
               <p className='mb-4 text-xs text-white/80 md:text-sm'>Trung tâm kinh tế sầm uất nhất cả nước</p>
-              <span className='inline-flex items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-xs font-bold text-white backdrop-blur-md transition-colors hover:bg-white'>
+              <span className='inline-flex items-center gap-1 rounded-full bg-white/20 px-4 py-2 text-xs font-bold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-brand-primary'>
                 2,400+ Dự án <ArrowUpRight className='h-3 w-3' />
               </span>
             </div>

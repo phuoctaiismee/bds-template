@@ -1,5 +1,6 @@
 'use client';
 
+import { useAuthStore } from '@/stores/auth';
 import { Briefcase, Calendar, Grip, Heart, LayoutDashboard, Settings } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -19,7 +20,6 @@ const useAuth = () => ({
     email: 'nam.tran@example.com',
   },
   isAuthenticated: true,
-  logout: () => console.log('Logged out'),
 });
 
 export default function ProfilePage() {
@@ -27,7 +27,8 @@ export default function ProfilePage() {
     'dashboard' | 'assets' | 'schedule' | 'collection' | 'projects' | 'tools' | 'settings'
   >('dashboard');
 
-  const { user, logout, isAuthenticated } = useAuth();
+  const { user, isAuthenticated } = useAuth();
+  const { setUser } = useAuthStore();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -51,7 +52,7 @@ export default function ProfilePage() {
   };
 
   const handleLogout = () => {
-    logout();
+    setUser(null);
     router.push('/login');
   };
 

@@ -84,7 +84,7 @@ export const NewsSection: React.FC = () => {
             </div>
 
             {/* Market Data Widget */}
-            <div className='bg-brand-bg min-w-70 snap-center rounded-xl border border-gray-100 p-6 lg:min-w-0'>
+            <div className='bg-background min-w-70 snap-center rounded-xl border border-gray-100 p-6 lg:min-w-0'>
               <div className='mb-4 flex items-center gap-2'>
                 <div className='bg-brand-primary rounded-lg p-1.5 text-white'>
                   <TrendingUp className='h-4 w-4' />
